@@ -14,6 +14,7 @@ simple-solidity/truffle-oldcon.js
 
 # Dependency directories
 simple-ui/node_modules/
+simple-solidity/node_modules/
 jspm_packages/
 
 
