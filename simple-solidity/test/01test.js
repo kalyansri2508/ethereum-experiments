@@ -15,28 +15,28 @@ contract("Test the SimpleContract",(accounts)=>{
       it("Call the setName Function - Lattala",()=>{
         return simpleContract.setName("Lattala").then((result)=>{
           console.log(result);
-          expect(result).to.not.be.equal("error");
+          expect(result).to.not.equal("error");
         });
       });
 
       it("Call the getName Function - Lattala",()=>{
         return simpleContract.getName().then((result)=>{
           console.log(result);
-          expect(result).to.be.equal("Lattala");
+          expect(result).to.equal("Lattala");
         });
       });
 
       it("Call the setName Function - Surya",()=>{
         return simpleContract.setName("Surya").then((result)=>{
           console.log(result);
-          expect(result).to.not.be.equal("error");
+          expect(result).to.not.equal("error");
         });
       });
 
       it("Call the getName Function - Surya",()=>{
         return simpleContract.getName().then((result)=>{
           console.log(result);
-          expect(result).to.be.equal("Surya");
+          expect(result).to.equal("Surya");
         });
       });
 

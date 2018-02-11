@@ -45,7 +45,10 @@ const SimpleContract = new web3.eth.Contract([
 
 app.get('/',(req,res)=>{
   SimpleContract.methods.getName().call().then((result)=>{
-    res.render('home.ejs',{name:result,result:undefined});
+  //  res.sendStatus(200);
+//  console.log(Boolean(result));
+    res.setHeader('Content-Type', 'text/html');
+    res.status(200).render('home.ejs',{name:result,result:undefined});
   });
 });
 
@@ -63,3 +66,5 @@ app.post('/setName',urlencodedParser,function(req,res){
 app.listen(3000,()=>{
   console.log('listening on 3000');
 });
+
+module.exports= app;
